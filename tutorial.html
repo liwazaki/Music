@@ -1,4 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KeyBeat — Type to DJ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header id="site-header">
+    <div class="brand">
+      <h1>KeyBeat</h1>
+      <p class="tag">Type letters. Make music. DJ your sentences.</p>
+    </div>
+    <nav id="main-nav" role="navigation" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sampler.html">Sampler</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</header>
 <section id="tutorial" class="card">
   <h2>Tutorial</h2>
   <p>Use the quick links below to jump to topics. finish this later when sampler is done</p>
+
+<h3>HI! Welcome to the Tutorial for KeyBeat</h3>
+<p>This tutorial will guide you through the features of KeyBeat and help you get started with creating music using your keyboard.</p>
+
+<p>Lets start with typing in the Sampler page. Press any letter key (A-Z) to hear the sound mapped to that letter. </p>
+
+<p>Type sentences into the text box and add a period (.) at the end to loop the sentence continuously. 
+To stop the loop, simply delete the sentence from the text box.</p>
+
+<p>Adjust effects using the following keywords in your sentences:</p>
+<ul>
+<li>volumeX - Sets the volume level (0-10)</li>
+<li>reverbX - Sets the reverb level (0-10)</li>
+<li>delayX - Sets the delay level (0-10)</li>
+</ul>
+<p>For example, typing "reverb" will give you a reverb level of 0 while "reverbbbbbb" will set it to 5.</p>
+<p>Now that you know the basics, start experimenting with different sentences and effects to create your own unique soundscapes!</p>
 </section>
+<!--footer for the site-->
+<footer id="site-footer">
+    <div class="footer-left">
+    <p>&copy; <span id="year"></span> KeyBeat</p>
+    </div>
+    <div class="footer-right">
+    <ul class="inline-links">
+    <li><a href="https://github.com/liwazaki/Music" rel="noopener" target="_blank">Code</a></li>
+    </ul>
+    </div>
+</footer>
+<!--makes it so the year in the footer will always the the most recent version-->
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
