@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KeyBeat — Type to DJ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header id="site-header">
+    <div class="brand">
+      <h1>KeyBeat</h1>
+      <p class="tag">Type letters. Make music. DJ your sentences.</p>
+    </div>
+    <nav id="main-nav" role="navigation" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sampler.html">Sampler</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</header>
+<!--header of the page,,, add image??-->
+<main id="main" role="main">
+<section id="hero" class="card">
+    <h3>Play with letters — become a keyboard DJ</h3>
+      <p>Press any letter key (A–Z) to hear the sound mapped to that letter. Type sentences into the text box to queue them as a sequence and add reverb or delay.</p>
+      <a class="cta" href="sampler.html">Start Playing</a>
+</section>
+<!--simple tutorial introduction-->
+<section id="how-to" class="card">
+<h3>How to</h3>
+    <ol>
+    <li>Open <a href="sampler.html">Sampler</a> to start typing.</li>
+    <li>Type sentences in the text area (on Sampler page) to play sounds.</li>
+    <li>Adjust effects using <a href="tutorial.html">Tutorial keys</a>.</li>
+    </ol>
+</section>
+<!--introdction into the game and development behind the game-->
+<section id="tour" class="card">
+    <h3>Development</h3>
+    <p id="tour-intro">A sneak peak into the development of the APP</p>
+    <div class="screenshot">
+    <img src="assets/img/dev.jpg" alt="Website Screenshot">
+    </div>
+</section>
+</main>
+<!--footer for the site-->
+<footer id="site-footer">
+    <div class="footer-left">
+    <p>&copy; <span id="year"></span> KeyBeat</p>
+    </div>
+    <div class="footer-right">
+    <ul class="inline-links">
+    <li><a href="https://github.com/liwazaki/Music" rel="noopener" target="_blank">Code</a></li>
+    </ul>
+    </div>
+</footer>
+<!--makes it so the year in the footer will always the the most recent version-->
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

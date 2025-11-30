@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KeyBeat — Type to DJ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header id="site-header">
+    <div class="brand">
+      <h1>KeyBeat</h1>
+      <p class="tag">Type letters. Make music. DJ your sentences.</p>
+    </div>
+    <nav id="main-nav" role="navigation" aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sampler.html">Sampler</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+</header>
+<main>
+<!--contact form-->
+  <article class="card contact-form">
+    <h2>Contact OR Submit Feedback</h2>
+    <form id="contactForm" action="contact.php" method="post" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required>
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required>
+
+      <label for="device">Device</label>
+      <select id="device" name="device" required>
+<!--selection button-->
+        <option value="">Select...</option>
+        <option value="desktop">Desktop</option>
+        <option value="mobile">Mobile</option>
+        <option value="tablet">Tablet</option>
+      </select>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+<!--subscribe checkbox option-->
+    <fieldset>
+        <legend>Subscribe</legend>
+        <label><input type="checkbox" name="subscribe" value="yes"> Subscribe for updates</label>
+    </fieldset>
+      <input id="formToken" type="hidden" name="formToken" value="static-token">
+      <div class="controls-row">
+        <button type="submit" class="btn">Send</button>
+        <button type="reset" class="btn outline">Reset</button>
+      </div>
+    </form>
+  </article>
+</main>
+<script>
+//only works if all fields are filled
+(function(){
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', function(e){
+    const required = ['name','email','device','message'];
+    let ok = true;
+    for(const id of required){
+    const el = document.getElementById(id);
+    if(!el.value.trim()){
+        ok = false;
+        el.classList.add('invalid');
+    } else el.classList.remove('invalid');
+    }
+    if(!ok){
+    e.preventDefault();
+    alert('Please fill ALL required fields.');
+    }
+});
+})();
+</script>
+</body>
+</html>

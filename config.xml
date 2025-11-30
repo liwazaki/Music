@@ -1,0 +1,9 @@
+<widget id="com.yourname.keysounds" version="1.0.0" xmlns="http://www.w3.org/ns/widgets">
+  <name>KeySounds</name>
+  <content src="index.html" />
+  <access origin="*" />
+  <allow-navigation href="*" />
+  <platform name="android">
+    <allow-intent href="market:*" />
+  </platform>
+</widget>
