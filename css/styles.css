@@ -4,10 +4,18 @@
 margin:0; 
 padding:0}
 body 
-{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+{ font-family: "Jersey 10", sans-serif;
 line-height:1.4; 
 color:#222; 
 background:#f7f7fb}
+/*google font: jersey 10*/
+/*https://fonts.google.com/specimen/Jersey+10?preview.text=a%20b%20c%20d%20e%20f%20g%20hi%20iiiii&query=jersey*/
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /*website header and the nav bar*/
 #site-header 
 {background: linear-gradient(90deg,#111,#334); 
@@ -31,13 +39,13 @@ margin-top:0.5rem}
 padding:0.5rem 0.8rem; 
 color:#ffffff; 
 text-decoration:none; 
-border-radius:6px}
+border-radius:0px}
 .nav-list li a:hover, .nav-list li a:focus 
-{background: rgba(255,255,255,0.08)}
+{background: rgba(255, 255, 255, 0.08)}
 .nav-list 
 {background: rgba(255,255,255,0.02); 
 padding:0.25rem; 
-border-radius:8px; 
+border-radius:0px; 
 list-style:none}
 /*main content layout*/
 main 
@@ -45,12 +53,16 @@ main
 margin:1.2rem auto; 
 padding:1rem}
 .card 
-{background:#fff; 
-border-radius:12px; 
-padding:1rem; 
-margin-bottom:1rem; 
-box-shadow:0 6px 20px rgba(20,20,40,0.06)}
+{background:#fff;
+border-radius:0;
+padding:1rem;
+margin-bottom:1rem;
+box-shadow: 0 0 0 4px #000,0 0 0 3px #666}
 /*adding a footer*/
+footer, .site-footer 
+{max-width:1100px;
+margin: 2rem auto;
+padding: 1rem}
 .footer-left 
 {float:left}
 .footer-right 
@@ -68,8 +80,15 @@ clear:both}
 @media (max-width: 720px) {
 .brand 
 {flex-direction:row}
-.nav-list 
+.nav-list
 {flex-wrap:wrap}
 .footer-left, .footer-right 
 {float:none; text-align:center}
 }
+/*screenshot styling*/
+.screenshot img
+{width: 100%;
+height: auto;    
+display: block;
+border: 4px solid #000;  
+object-fit: contain}
