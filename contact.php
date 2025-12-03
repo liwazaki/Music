@@ -9,9 +9,6 @@ if(!$name || !$email || !$device || !$message){
   echo "<h1>Error</h1><p>Please fill required fields. <a href='contact.html'>Back</a></p>";
   exit;
 }
-
-// In production: sanitize, store to DB or send email with proper headers
-// For demo, just echo back
 ?>
 <!doctype html>
 <html>

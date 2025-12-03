@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KeyBeat — Type to DJ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+<!--link to the coral pixels font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+</head>
+<body>
+<header id="site-header">
+    <div class="brand">
+      <h1>KeyBeat</h1>
+      <p class="tag">Type letters. Make music. DJ your sentences.</p>
+    </div>
+    <nav id="main-nav" role="navigation" aria-label="Main">
+      <ul class="nav-list">
+<!--homepage is index.html-->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="DJ.html">DJ</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="examples.html">Examples</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+</header>
+<main>
+<section id="about" class="card">
+    <h1>About KeyBeat</h1>
+      <p>KeyBeat is an web application that transforms your keyboard into a DJ Board. By mapping each letter key (A-Z) to unique sounds, KeyBeat allows users to create music simply by typing sentences. Whether you're a beginner or an expert, KeyBeat offers a fun and interactive way to explore music creation.</p>
+</section>  
+<section id="features" class="card">
+    <h2>Features</h2>
+    <ul>
+        <li><b>Sound Mapping:</b> Each letter key is linked to a distinct sound, enabling users to make music through typing.</li>
+        <li><b>Sentence Sequencing:</b> Type sentences to queue sounds in a sequence, allowing for musical arrangements.</li>
+        <li><b>Effects Control:</b> Adjust reverb and delay effects using keywords in your sentences to enhance your songs.</li>
+        <li><b>User-Friendly Interface:</b> A simple interface makes it easy for anyone to start creating music.</li>
+    </ul>
+</section>
+<section id="development" class="card">
+    <h2>Development</h2>
+    <p>KeyBeat was developed using modern web technologies, including HTML5, CSS3, and JavaScript. The application uses the Web Audio API to handle sound generation and effects processing. The project is open-source and available on GitHub.</p>
+    <p>For more details on the development process and to access the source code, visit the <a href="github.com/liwazaki/Music" target="_blank" rel="noopener">GitHub repository</a>.</p>
+</section>      
+<section id="team" class="card">
+    <h2>Meet the Team</h2>
+    <p>KeyBeat was created by <b>Luna Iwazaki</b>, a developer and music enthusiast. With a vision to make music creation accessible to everyone, Luna combined her skills in web development and love for music to bring KeyBeat to life.</p>
+        <img src="img/luna.jpg" alt="Luna Iwazaki" style="width:150px;height:150px;display:block; margin: 0 auto;">
+    <p style="text-align:center;">For inquiries or collaborations, feel free to reach out via the <a href="contact.html">Contact page</a>.</p>
+</section>  
+</main>
+<!--footer for the site-->
+<footer id="site-footer">
+    <div class="footer-left">
+    <p>&copy; <span id="year"></span> KeyBeat</p>
+    </div>
+    <div class="footer-right">
+    <ul class="inline-links">
+    <p><a href="https://github.com/liwazaki/Music" rel="noopener" target="_blank">GitHub</a></p>
+    </ul>
+    </div>
+</footer>
+<!--makes it so the year in the footer will always the the most recent version-->
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

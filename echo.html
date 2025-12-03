@@ -1,18 +1,11 @@
-<!--tells browser that doc is using HTML5 webpage-->
 <!doctype html>
-<!--declares document and using English language-->
 <html lang="en">
-<!--begining the head section of like metadata, font, title-->
 <head>
-<!--setting character encoding to utf-8, makes sure all symbols display right-->
   <meta charset="utf-8" />
-<!--allowing the website to scale on phones and different devices-->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-<!--setting the title of the webpage-->
   <title>KeyBeat — Type to DJ</title>
-<!--loading main css page, in this case the styles.css-->
   <link rel="stylesheet" href="css/styles.css" />
-<!--link to the jersey 10 font-->
+<!--link to the coral pixels font-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
@@ -36,28 +29,20 @@
       </ul>
     </nav>
 </header>
-<!--header of the page,,, add image??-->
-<main id="main" role="main">
-<section id="hero" class="card">
-    <h1>Play with letters 🎵 become a keyboard DJ</h1>
-      <p>Press any letter key (A–Z) to hear the sound mapped to that letter. Type sentences into the text box to queue them as a sequence and add reverb or delay.</p>
-      <a class="cta" href="DJ.html">Start Playing</a>
-</section>
-<!--simple tutorial introduction-->
-<section id="how-to" class="card">
-<h3>How to</h3>
-<p>1. Open <a href="DJ.html">DJ</a> to start typing</p>
-<p>2. Type sentences in the text area (on DJ page) to play sounds</p>
-<p>3. To learn more go to <a href="tutorial.html">Tutorial Keys</a></p>
-</section>
-<!--introdction into the game and development behind the game-->
-<section id="tour" class="card">
-    <h3>Development</h3>
-    <p id="tour-intro">For a sneak peek into the development of KeyBeats click <a href="https://github.com/liwazaki/Music">Here</a></p>
-    <div class="screenshot">
-    <img src="img/welcometype.gif" alt="Website Gif">
-    </div>
-</section>
+<main> 
+    <article class="card contact-form">
+        <h2>Thank You for Contacting KeyBeat!</h2>
+        <p>We have received your message and will get back to you shortly.</p>
+        <h3>Your Submitted Information:</h3>
+        <ul>
+        <li><strong>Name:</strong> <?php echo htmlspecialchars($_POST['name']); ?></li>
+        <li><strong>Email:</strong> <?php echo htmlspecialchars($_POST['email']); ?></li>
+        <li><strong>Device:</strong> <?php echo htmlspecialchars($_POST['device']); ?></li>
+        <li><strong>Message:</strong> <?php echo nl2br(htmlspecialchars($_POST['message'])); ?></li>
+        <li><strong>Subscribed:</strong> <?php echo isset($_POST['subscribe']) ? 'Yes' : 'No'; ?></li>
+        </ul>
+        <p><a href="index.html">Return to Home</a></p>
+    </article>
 </main>
 <!--footer for the site-->
 <footer id="site-footer">

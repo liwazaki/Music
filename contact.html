@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>KeyBeat — Type to DJ</title>
   <link rel="stylesheet" href="css/styles.css" />
+<!--link to the coral pixels font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
 </head>
 <body>
 <header id="site-header">
@@ -14,10 +18,14 @@
     </div>
     <nav id="main-nav" role="navigation" aria-label="Main">
       <ul class="nav-list">
+<!--using a minimum of 7 content pages: index,sampler,tutorial,contact,about,saved,examples-->
+<!--homepage is index.html-->
         <li><a href="index.html">Home</a></li>
-        <li><a href="sampler.html">Sampler</a></li>
+        <li><a href="DJ.html">DJ</a></li>
         <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="examples.html">Examples</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
 </header>
@@ -76,5 +84,20 @@ form.addEventListener('submit', function(e){
 });
 })();
 </script>
+</body>
+</main>
+<!--footer for the site-->
+<footer id="site-footer">
+    <div class="footer-left">
+    <p>&copy; <span id="year"></span> KeyBeat</p>
+    </div>
+    <div class="footer-right">
+    <ul class="inline-links">
+    <p><a href="https://github.com/liwazaki/Music" rel="noopener" target="_blank">GitHub</a></p>
+    </ul>
+    </div>
+</footer>
+<!--makes it so the year in the footer will always the the most recent version-->
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -71,20 +71,8 @@ padding: 1rem}
 {content:""; 
 display:block; 
 clear:both}
-/*multiple selectors requirment*/
 #main .card, .card 
 {font-size:1rem;}
-#logo, .brand img 
-{display:inline-block;}
-/*screen responsive aspect*/
-@media (max-width: 720px) {
-.brand 
-{flex-direction:row}
-.nav-list
-{flex-wrap:wrap}
-.footer-left, .footer-right 
-{float:none; text-align:center}
-}
 /*screenshot styling*/
 .screenshot img
 {width: 100%;
@@ -92,3 +80,59 @@ height: auto;
 display: block;
 border: 4px solid #000;  
 object-fit: contain}
+
+/*examples page css*/
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 40px;
+}
+.pixel-card {
+  background: #fff;
+  padding: 20px;
+  border: 4px solid black;
+/*shadow adds the 3d effect same for the button*/
+  box-shadow: 4px 4px 0px black;
+  border-radius: 0;
+  text-align: center;
+}
+.pixel-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.pixel-card p {
+  margin-bottom: 15px;
+  font-size: .95rem;
+}
+/*play button for the pixel card*/
+.play-btn {
+  padding: 10px 20px;
+  font-family: "Jersey 10", sans-serif;
+  font-size: 1rem;
+  border: 3px solid black;
+  background: #e0e0e0;
+  box-shadow: 3px 3px 0 black;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.play-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 black;
+}
+
+
+
+
+/*screen responsive aspect*/
+@media (max-width: 720px) {
+.brand 
+{flex-direction:row}
+.nav-list
+{flex-wrap:wrap}
+.footer-left, .footer-right 
+{float:none; 
+text-align:center}
+.examples-grid 
+{grid-template-columns: 1fr}
+}
